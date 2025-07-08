@@ -167,6 +167,28 @@ export const deadNpcMap: Record<string, string> = {
   "Henrik \"Freakout\" Johnson": "Генрих 'Приступ' Джонсон",
   "Freak": ""
 }
+export const levelMap: Record<string, string> = {
+  "Alpine Hospitality": "Альпийское Гостеприимство",
+  "Androgen Assault": "Андрогенный Штурм",
+  "Apartment Atrocity": "Резня в Апартаментах",
+  "Archon Grid": "Архонт Сеть",
+  "Bog Business": "Болотный бизнесс",
+  "Casino Catastrophe": "Катастрофа в Казино",
+  "Cruelty Squad Headquarters": "Штаб-Квартира Cruelty Squad",
+  "Darkworld": "Тёмный Мир",
+  "House": "Дом",
+  "Idiot Party": "Вечеринка Идиотов",
+  "Mall Madness": "Торговое Безумие",
+  "Miner's Miracle": "Чудо Шахтёра",
+  "Neuron Activator": "Нейронный Активатор",
+  "Office": "Офис",
+  "Paradise": "Парадайз",
+  "Pharmakokinetiks": "Фармакокинетика",
+  "Seaside Shock": "Прибрежный Шок",
+  "Sin Space Engineering": "Космическая Инженерия 'ГРЕХ'",
+  "Trauma Loop": "Травматический Цикл"
+}
+
 
 export const implantMap: Record<string, string> = {
   "First Aid Kit": "Аптечка Первой Помощи",
