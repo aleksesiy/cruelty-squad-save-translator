@@ -1,6 +1,4 @@
-//placeholder savefile
-
-export const savefile = {
+{
     "Alpine Hospitality_hell_raw_stime": 62315,
     "Alpine Hospitality_hell_raw_time": 42122,
     "Alpine Hospitality_hell_string_stime": "1.2.315",
@@ -187,6 +185,7 @@ export const savefile = {
         "Pneumatic Legs",
         "First Aid Kit",
         "Stealth Suit",
+        "Grappendix",
         "Vertical Entry Device",
         "Life Sensor",
         "Gunkboosters",
