@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx tsx translator.ts"
+    "rustest": "npx tsx translate-to-rus.ts",
+    "engtest": "npx tsx translate-to-eng.ts"
   },
   "keywords": [],
   "author": "",

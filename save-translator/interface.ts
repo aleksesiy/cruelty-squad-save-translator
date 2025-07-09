@@ -19,178 +19,103 @@ export interface Savefile {
   "weapons_unlocked": boolean[],
 
 
-
-  "Alpine Hospitality_hell_raw_stime": number;
-  "Alpine Hospitality_hell_raw_time": number;
-  "Alpine Hospitality_hell_string_stime": string;
-  "Alpine Hospitality_raw_stime": number;
-  "Alpine Hospitality_raw_time": number;
-  "Alpine Hospitality_string_stime": string;
-
-  "Androgen Assault_hell_raw_stime": number;
-  "Androgen Assault_hell_raw_time": number;
-  "Androgen Assault_hell_string_stime": string;
-  "Androgen Assault_raw_stime": number;
-  "Androgen Assault_raw_time": number;
-  "Androgen Assault_string_stime": string;
-
-  "Apartment Atrocity_hell_raw_stime": number;
-  "Apartment Atrocity_hell_raw_time": number;
-  "Apartment Atrocity_hell_string_stime": string;
-  "Apartment Atrocity_raw_stime": number;
-  "Apartment Atrocity_raw_time": number;
-  "Apartment Atrocity_string_stime": string;
-
-  "Archon Grid_hell_raw_stime": number;
-  "Archon Grid_hell_raw_time": number;
-  "Archon Grid_hell_string_stime": string;
-  "Archon Grid_raw_stime": number;
-  "Archon Grid_raw_time": number;
-  "Archon Grid_string_stime": string;
-
-  "Bog Business_hell_raw_stime": number;
-  "Bog Business_hell_raw_time": number;
-  "Bog Business_hell_string_stime": string;
-  "Bog Business_raw_stime": number;
-  "Bog Business_raw_time": number;
-  "Bog Business_string_stime": string;
-
-  "Casino Catastrophe_hell_raw_stime": number;
-  "Casino Catastrophe_hell_raw_time": number;
-  "Casino Catastrophe_hell_string_stime": string;
-  "Casino Catastrophe_raw_stime": number;
-  "Casino Catastrophe_raw_time": number;
-  "Casino Catastrophe_string_stime": string;
-
-  "Cruelty Squad Headquarters_hell_raw_stime": number;
-  "Cruelty Squad Headquarters_hell_raw_time": number;
-  "Cruelty Squad Headquarters_hell_string_stime": string;
-  "Cruelty Squad Headquarters_raw_stime": number;
-  "Cruelty Squad Headquarters_raw_time": number;
-  "Cruelty Squad Headquarters_string_stime": string;
-
-  "Darkworld_hell_raw_stime": number;
-  "Darkworld_hell_raw_time": number;
-  "Darkworld_hell_string_stime": string;
-  "Darkworld_raw_stime": number;
-  "Darkworld_raw_time": number;
-  "Darkworld_string_stime": string;
-
-  "House_hell_raw_stime": number;
-  "House_hell_raw_time": number;
-  "House_hell_string_stime": string;
-  "House_raw_stime": number;
-  "House_raw_time": number;
-  "House_string_stime": string;
-
-  "Idiot Party_hell_raw_stime": number;
-  "Idiot Party_hell_raw_time": number;
-  "Idiot Party_hell_string_stime": string;
-  "Idiot Party_raw_stime": number;
-  "Idiot Party_raw_time": number;
-  "Idiot Party_string_stime": string;
-
-  "Mall Madness_hell_raw_stime": number;
-  "Mall Madness_hell_raw_time": number;
-  "Mall Madness_hell_string_stime": string;
-  "Mall Madness_raw_stime": number;
-  "Mall Madness_raw_time": number;
-  "Mall Madness_string_stime": string;
-
-  "Miner's Miracle_hell_raw_stime": number;
-  "Miner's Miracle_hell_raw_time": number;
-  "Miner's Miracle_hell_string_stime": string;
-  "Miner's Miracle_raw_stime": number;
-  "Miner's Miracle_raw_time": number;
-  "Miner's Miracle_string_stime": string;
-
-  "Neuron Activator_hell_raw_stime": number;
-  "Neuron Activator_hell_raw_time": number;
-  "Neuron Activator_hell_string_stime": string;
-  "Neuron Activator_raw_stime": number;
-  "Neuron Activator_raw_time": number;
-  "Neuron Activator_string_stime": string;
-
-  "Office_hell_raw_stime": number;
-  "Office_hell_raw_time": number;
-  "Office_hell_string_stime": string;
-  "Office_raw_stime": number;
-  "Office_raw_time": number;
-  "Office_string_stime": string;
-
-  "Paradise_hell_raw_stime": number;
-  "Paradise_hell_raw_time": number;
-  "Paradise_hell_string_stime": string;
-  "Paradise_raw_stime": number;
-  "Paradise_raw_time": number;
-  "Paradise_string_stime": string;
-
-  "Pharmakokinetiks_hell_raw_stime": number;
-  "Pharmakokinetiks_hell_raw_time": number;
-  "Pharmakokinetiks_hell_string_stime": string;
-  "Pharmakokinetiks_raw_stime": number;
-  "Pharmakokinetiks_raw_time": number;
-  "Pharmakokinetiks_string_stime": string;
-
-  "Seaside Shock_hell_raw_stime": number;
-  "Seaside Shock_hell_raw_time": number;
-  "Seaside Shock_hell_string_stime": string;
-  "Seaside Shock_raw_stime": number;
-  "Seaside Shock_raw_time": number;
-  "Seaside Shock_string_stime": string;
-
-  "Sin Space Engineering_hell_raw_stime": number;
-  "Sin Space Engineering_hell_raw_time": number;
-  "Sin Space Engineering_hell_string_stime": string;
-  "Sin Space Engineering_raw_stime": number;
-  "Sin Space Engineering_raw_time": number;
-  "Sin Space Engineering_string_stime": string;
-
-  "Trauma Loop_hell_raw_stime": number;
-  "Trauma Loop_hell_raw_time": number;
-  "Trauma Loop_hell_string_stime": string;
-  "Trauma Loop_raw_stime": number;
-  "Trauma Loop_raw_time": number;
-  "Trauma Loop_string_stime": string;
+  [key: `${string}_hell_raw_stime`]: number;
+  [key: `${string}_hell_raw_time`]: number;
+  [key: `${string}_hell_string_stime`]: string;
+  [key: `${string}_hell_string_time`]: string;
+  [key: `${string}_raw_stime`]: number;
+  [key: `${string}_raw_time`]: number;
+  [key: `${string}_string_stime`]: string;
+  [key: `${string}_string_time`]: string;
 }
 
-export const deadNpcMap: Record<string, string> = {
+export const deadNpcMapToRus: Record<string, string> = {
   "$1000000 received.": "$1000000 получено.",
   "Golem Exosystem received.": "Экзоcистема 'Голем' получена.",
   "Raymond Shocktroop Tactical received.": "Raymond Shocktroop Tactical получен.",
   "Jurgen Cool": "Йурген Крутой",
   "Mark Bilberry": "Марк Чернигов",
   "Michael Nielsen": "Майкл Нильсен",
-  "Burt Grundel":  "Берт Грундель",
+  "Burt Grundel": "Берт Грундель",
   "Limit Chancellor": "Канцлер Предела",
-  "Ambassador": "",
+  "Ambassador": "Амбассадор",
   "Henrik \"Freakout\" Johnson": "Генрих 'Приступ' Джонсон",
-  "Freak": ""
+  "Freak": "Фрик"
 }
-export const levelMap: Record<string, string> = {
+export const deadNpcMapToEng: Record<string, string> = {
+  "$1000000 получено.": "$1000000 received.",
+  "Экзоcистема 'Голем' получена.": "Golem Exosystem received.",
+  "Raymond Shocktroop Tactical получен.": "Raymond Shocktroop Tactical received.",
+  "Йурген Крутой": "Jurgen Cool",
+  "Марк Чернигов": "Mark Bilberry",
+  "Майкл Нильсен": "Michael Nielsen",
+  "Берт Грундель": "Burt Grundel",
+  "Канцлер Предела": "Limit Chancellor",
+  "Амбассадор": "Ambassador",
+  "Генрих 'Приступ' Джонсон": "Henrik \"Freakout\" Johnson",
+  "Фрик": "Freak"
+};
+
+// export const deadNpcArr: [string, string][]= [
+//   ["$1000000 received.", "$1000000 получено."],
+//   ["Golem Exosystem received.", "Экзоcистема 'Голем' получена."],
+//   ["Raymond Shocktroop Tactical received.", "Raymond Shocktroop Tactical получен."],
+//   ["Jurgen Cool", "Йурген Крутой"],
+//   ["Mark Bilberry", "Марк Чернигов"],
+//   ["Michael Nielsen", "Майкл Нильсен"],
+//   ["Burt Grundel", "Берт Грундель"],
+//   ["Limit Chancellor", "Канцлер Предела"],
+//   ["Ambassador", ""],
+//   ["Henrik \"Freakout\" Johnson", "Генрих 'Приступ' Джонсон"],
+//   ["Freak", ""]
+// ]
+export const levelMapToRus: Record<string, string> = {
   "Alpine Hospitality": "Альпийское Гостеприимство",
   "Androgen Assault": "Андрогенный Штурм",
   "Apartment Atrocity": "Резня в Апартаментах",
   "Archon Grid": "Архонт Сеть",
   "Bog Business": "Болотный бизнесс",
   "Casino Catastrophe": "Катастрофа в Казино",
-  "Cruelty Squad Headquarters": "Штаб-Квартира Cruelty Squad",
-  "Darkworld": "Тёмный Мир",
+  "Cruelty Squad Headquarters": "Штаб Отряда Жестокости",
+  "Darkworld": "Тёмномирье",
   "House": "Дом",
   "Idiot Party": "Вечеринка Идиотов",
   "Mall Madness": "Торговое Безумие",
-  "Miner's Miracle": "Чудо Шахтёра",
+  "Miner's Miracle": "Шахтёрское Чудо",
   "Neuron Activator": "Нейронный Активатор",
   "Office": "Офис",
   "Paradise": "Парадайз",
-  "Pharmakokinetiks": "Фармакокинетика",
+  "Pharmakokinetiks": "Фармакокинетикс",
   "Seaside Shock": "Прибрежный Шок",
   "Sin Space Engineering": "Космическая Инженерия 'ГРЕХ'",
   "Trauma Loop": "Травматический Цикл"
 }
 
+export const levelMapToEng: Record<string, string> = {
+  "Альпийское Гостеприимство": "Alpine Hospitality",
+  "Андрогенный Штурм": "Androgen Assault",
+  "Резня в Апартаментах": "Apartment Atrocity",
+  "Архонт Сеть": "Archon Grid",
+  "Болотный бизнесс": "Bog Business",
+  "Катастрофа в Казино": "Casino Catastrophe",
+  "Штаб Отряда Жестокости": "Cruelty Squad Headquarters",
+  "Тёмномирье": "Darkworld",
+  "Дом": "House",
+  "Вечеринка Идиотов": "Idiot Party",
+  "Торговое Безумие": "Mall Madness",
+  "Шахтёрское Чудо": "Miner's Miracle",
+  "Нейронный Активатор": "Neuron Activator",
+  "Офис": "Office",
+  "Парадайз": "Paradise",
+  "Фармакокинетикс": "Pharmakokinetiks",
+  "Прибрежный Шок": "Seaside Shock",
+  "Космическая Инженерия 'ГРЕХ'": "Sin Space Engineering",
+  "Травматический Цикл": "Trauma Loop"
+};
 
-export const implantMap: Record<string, string> = {
+
+
+export const implantMapToRus: Record<string, string> = {
   "First Aid Kit": "Аптечка Первой Помощи",
   "Load Bearing Vest": "Разгрузочный Жилет",
   "Pneumatic Legs": "Пневматические Ноги",
@@ -223,7 +148,6 @@ export const implantMap: Record<string, string> = {
   "ZZzzz Special Sedative Grenade": "Специальная Седативная Граната ZZzzz",
   "Augmented arms": "Аугментированные руки",
   "Zomy X-200 Portable Cassette Player": "Портативный Кассетный Плеер Zomy X-200",
-  "Skull Gun": "Черепопушка",
   "Skullgun": "Черепопушка",
   "Zoom n Go Bionic Eyes": "Бионические глаза Zoom N Go",
   "Zoom N Go Bionic Eyes": "Бионические глаза Zoom N Go",
@@ -242,4 +166,56 @@ export const implantMap: Record<string, string> = {
   "Holy Scope": "Священный Прицел",
   "Biojet": "Биоджет",
   "Flowerchute": "Цветопрыск"
+};
+
+export const implantMapToEng: Record<string, string> = {
+  "Аптечка Первой Помощи": "First Aid Kit",
+  "Разгрузочный Жилет": "Load Bearing Vest",
+  "Пневматические Ноги": "Pneumatic Legs",
+  "Стелс-Костюм": "Stealth Suit",
+  "Грапендикс": "Grappendix",
+  "Девайс Вертикального Проникновения": "Vertical Entry Device",
+  "Датчик Жизненных Показателей": "Life Sensor",
+  "Гноеплюй": "Gunkboosters",
+  "Биокостюм V класса CSIJ": "CSIJ Level V Biosuit",
+  "Машина Икароса": "Icaros Machine",
+  "Очки Кошмарного Видения": "Nightmare Vision Goggles",
+  "Броня II класса CSIJ": "CSIJ Level II Body Armor",
+  "Броня IIВ класса CSIJ": "CSIJ Level IIB Body Armor",
+  "Инопланетное Биологическое Обеспечение Для Ног": "Alien Leg Wetware",
+  "Броня IV класса CSIJ": "CSIJ Level IV Body Armor",
+  "Граната": "HE Grenade",
+  "Костюм Химзащиты": "Hazmat Suit",
+  "Полный Набор Органов Улучшения Скорости": "Speed Enhancer Total Organ Package",
+  "Тактическая Амуниция Углового Преимущества": "Angular Advantage Tactical Munitions",
+  "Фанковорчалки": "Funkgrunters",
+  "Бывалая Дождевая Шляпа": "Tattered Rain Hat",
+  "Костюм Прыг-Скок": "Bouncy Suit",
+  "Флешеттная Граната": "Flechette Grenade",
+  "Дом": "House",
+  "Амуниционные Железы": "Ammunition Gland",
+  "Военный Камуфляж": "Military Camouflage",
+  "Броня III класса CSIJ": "CSIJ Level III Body Armor",
+  "Тактический Противовзрывной Щит": "Tactical Blast Shield",
+  "Биосопло": "Biothruster",
+  "Специальная Седативная Граната ZZzzz": "ZZzzz Special Sedative Grenade",
+  "Аугментированные руки": "Augmented arms",
+  "Портативный Кассетный Плеер Zomy X-200": "Zomy X-200 Portable Cassette Player",
+  "Черепопушка": "Skullgun",
+  "Бионические глаза Zoom N Go": "Zoom N Go Bionic Eyes",
+  "Композитный шлем": "Composite Helmet",
+  "Скопление Лимфоузлов Улучшения Скорости": "Speed Enhancer Node Cluster",
+  "Гланды Улучшения Скорости": "Speed Enhancer Gland",
+  "Глаз Корповидения": "Eyes of Corporate Insight",
+  "Экстравагантный костюм": "Extravagant Suit",
+  "Очки Ночного Видения": "Night Vision Goggles",
+  "Экзоcистема 'Голем' VI класса CSIJ": "CSIJ Level VI Golem Exosystem",
+  "Слизь-Перегруз": "Goo Overdrive",
+  "Проклятый Светильник": "Cursed Torch",
+  "Кортикальный Уменьшатель+": "Cortical Scaledown+",
+  "Богомерз": "Abominator",
+  "Гланды Выделения Масла Microbial": "Microbial Oil Secretion Glands",
+  "Священный Прицел": "Holy Scope",
+  "Биоджет": "Biojet",
+  "Цветопрыск": "Flowerchute"
 };

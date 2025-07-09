@@ -1,4 +1,4 @@
-//placeholder savefile
+//placeholder eng savefile
 
 export const savefile = {
     "Alpine Hospitality_hell_raw_stime": 62315,
