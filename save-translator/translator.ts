@@ -1,44 +1,45 @@
 import { Savefile, implantMap, deadNpcMap, levelMap } from "./interface";
 import { savefile } from "./savegame";
 
-function translate(savefile: Savefile) {
-    const implantsRu = translateImplants(savefile.implants_unlocked);
-    const deadNpcsRu = translateDeadNpcs(savefile.dead_npcs);
-    const bonusesRu = translateBonuses(savefile.bonus_unlocked)
-    const levelsRu = translateLevels(savefile)
+function translateToRus(savefile: Savefile) {
+    const savefileRu = translateLevelsToRus(savefile)
 
-    console.log(levelsRu);
+    savefileRu.implants_unlocked = translateImplantsToRus(savefile.implants_unlocked);
+    savefileRu.dead_npcs = translateDeadNpcsToRus(savefile.dead_npcs);
+    savefileRu.bonus_unlocked = translateBonusesToRus(savefile.bonus_unlocked)
+
+    console.log(JSON.stringify(savefileRu));    
+    return JSON.stringify(savefileRu)
 
 }
 
-function translateImplants(implants: Savefile["implants_unlocked"]) {
+function translateImplantsToRus(implants: Savefile["implants_unlocked"]) {
     const implantsRu: string[] = []
     implants.forEach(element => {
         implantsRu.push(implantMap[element])
     });
     return implantsRu
 }
-function translateDeadNpcs(deadNpsc: Savefile['dead_npcs']) {
+function translateDeadNpcsToRus(deadNpsc: Savefile['dead_npcs']) {
     const deadNpcsRu: string[] = []
     deadNpsc.forEach(element => {
         deadNpcsRu.push(deadNpcMap[element])
     })
     return deadNpcsRu
 }
-function translateBonuses(bonuses: Savefile['bonus_unlocked']) {
+function translateBonusesToRus(bonuses: Savefile['bonus_unlocked']) {
     if (bonuses.indexOf('House') !== -1) {
         bonuses.splice(bonuses.indexOf('House'), 1, "Дом")
     }
     return bonuses
 }
-function translateLevels(levels: Savefile) {
+function translateLevelsToRus(levels: Savefile) {
     let levelsStr = JSON.stringify(levels)
     for (let i = 0; i < Object.keys(levelMap).length; i++) {
-        console.log(Object.keys(levelMap)[i], Object.values(levelMap)[i])
         levelsStr = levelsStr.replaceAll(Object.keys(levelMap)[i], Object.values(levelMap)[i])
     }
-    return levelsStr
+    return JSON.parse(levelsStr)
 }
 
 
-translate(savefile)
+translateToRus(savefile)
