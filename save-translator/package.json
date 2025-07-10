@@ -1,0 +1,18 @@
+{
+  "name": "save-translator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "rustest": "npx tsx translate-to-rus.ts",
+    "engtest": "npx tsx translate-to-eng.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
