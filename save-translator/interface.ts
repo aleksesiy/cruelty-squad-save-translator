@@ -1,7 +1,7 @@
 export interface Savefile {
-  'bonus_unlocked': string[], //translator added
+  'bonus_unlocked': string[],
   'consecutive_deaths': number,
-  'dead_npcs': string[], //translator added
+  'dead_npcs': string[],
   'death': boolean,
   "ending_1": boolean,
   "ending_2": boolean,
@@ -9,9 +9,9 @@ export interface Savefile {
   "hell_discovered": boolean,
   "hope": boolean,
   "husk": boolean,
-  "implants_unlocked": string[], //translator added
+  "implants_unlocked": string[],
   "items_found": string[],
-  "levels_punished": boolean[], //translator not required
+  "levels_punished": boolean[],
   "levels_unlocked": number,
   "money": number,
   "play_time": number,
@@ -40,7 +40,8 @@ export const deadNpcMapToRus: Record<string, string> = {
   "Limit Chancellor": "Канцлер Предела",
   "Ambassador": "Амбассадор",
   "Henrik \"Freakout\" Johnson": "Генрих 'Приступ' Джонсон",
-  "Freak": "Фрик"
+  "Freak": "Фрик",
+  "Jurgen Blimp": "Йурген Дирижабль"
 }
 export const deadNpcMapToEng: Record<string, string> = {
   "$1000000 получено.": "$1000000 received.",
@@ -53,7 +54,8 @@ export const deadNpcMapToEng: Record<string, string> = {
   "Канцлер Предела": "Limit Chancellor",
   "Амбассадор": "Ambassador",
   "Генрих 'Приступ' Джонсон": "Henrik \"Freakout\" Johnson",
-  "Фрик": "Freak"
+  "Фрик": "Freak",
+  "Йурген Дирижабль": "Jurgen Blimp"
 };
 
 // export const deadNpcArr: [string, string][]= [
