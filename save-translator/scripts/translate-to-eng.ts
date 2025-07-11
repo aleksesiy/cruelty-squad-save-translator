@@ -1,7 +1,7 @@
 import { implantMapToEng, deadNpcMapToEng, levelMapToEng, Savefile } from "./interface";
 import { savegameru } from "./savegameru";
 
-function translateToEng(savefileru: Savefile): string {
+export function translateToEng(savefileru: Savefile): string {
     const savefileEn = translateLevelsToEng(savefileru)
 
     savefileEn.implants_unlocked = translateImplantsToEng(savefileru.implants_unlocked);
