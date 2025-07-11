@@ -1,7 +1,7 @@
 import { Savefile, implantMapToRus, deadNpcMapToRus, levelMapToRus } from "./interface";
 import { savefile } from "./savegame";
 
-function translateToRus(savefile: Savefile): string {
+export function translateToRus(savefile: Savefile): string {
     const savefileRu = translateLevelsToRus(savefile)
 
     savefileRu.implants_unlocked = translateImplantsToRus(savefile.implants_unlocked);

@@ -1,4 +1,5 @@
 import { translateToEng } from '../scripts/translate-to-eng'
+import { translateToRus } from '../scripts/translate-to-rus'
 import { createElement } from './element-creator'
 import './main.css'
 console.log('hi')
@@ -8,7 +9,18 @@ const heading = createElement({
     text: 'Переводчик сохранений для Cruelty Squad',
     parent: document.body
 })
-
+const toggleText = createElement({
+    tag: 'p',
+    text: 'Режим: ',
+    parent: document.body,
+    classes: ['toggleText']
+})
+const toggleBtn = createElement({
+    tag: 'button',
+    parent: toggleText,
+    classes: ['toggleBtn'],
+    text: 'rus -> eng 🔄️'
+})
 const main = createElement({
     tag: 'div',
     parent: document.body,
@@ -28,7 +40,8 @@ const inputContInput = createElement({
     tag: 'textarea',
     parent: inputCont,
 })
-inputContInput.rows = 30;
+const textareaHeight = ((window.innerHeight / 16) * 0.6) < 30 ? ((window.innerHeight / 16) * 0.6) : 30
+inputContInput.rows = textareaHeight;
 inputContInput.cols = 30;
 inputContInput.placeholder = 'savegameru.save'
 const outputCont = createElement({
@@ -44,7 +57,14 @@ const outputContOutput = createElement({
     tag: 'textarea',
     parent: outputCont,
 })
-outputContOutput.rows = 30;
+const copyBtn = createElement({
+    tag: 'div',
+    text: 'Нажмите, чтобы скопировать',
+    parent: outputCont,
+    classes: ['copyBtn']
+})
+let isReturned = false
+outputContOutput.rows = textareaHeight;
 outputContOutput.cols = 30;
 outputContOutput.placeholder = 'savegame.save'
 
@@ -55,6 +75,54 @@ const translateBtn = createElement({
     parent: document.body,
     classes: ['translateBtn']
 })
-translateBtn.addEventListener('click', () => {
-    outputContOutput.value = translateToEng(JSON.parse(inputContInput.value))
+translateBtn.disabled = true
+
+
+
+toggleBtn.addEventListener('click', () => {
+    if (toggleBtn.textContent === 'rus -> eng 🔄️') {
+        toggleBtn.textContent = 'eng -> rus 🔄️'
+        translateBtn.addEventListener('click', () => {
+            outputContOutput.value = translateToRus(JSON.parse(inputContInput.value))
+            copyBtn.classList.add('showup')
+        })
+        outputContOutput.placeholder = 'savegameru.save'
+
+        inputContInput.placeholder = 'savegame.save'
+    } else {
+        toggleBtn.textContent = 'rus -> eng 🔄️'
+        translateBtn.addEventListener('click', () => {
+            outputContOutput.value = translateToEng(JSON.parse(inputContInput.value))
+            isReturned = true
+            copyBtn.classList.add('showup')
+
+        })
+        inputContInput.placeholder = 'savegameru.save'
+        outputContOutput.placeholder = 'savegame.save'
+
+    }
 })
+async function copyTextToClipboard(text: string) {
+    try {
+        await navigator.clipboard.writeText(text);
+        copyBtn.textContent = 'Скопировано!';
+        setTimeout(() => 
+        copyBtn.classList.remove('showup'), 1000)
+
+    } catch (err) {
+        console.error('Failed to copy text: ', err);
+    }
+}
+copyBtn.addEventListener('click', () => copyTextToClipboard(outputContOutput.value))
+
+function validateInput() {
+    if (inputContInput.value.length < 7000) {
+        translateBtn.disabled = true
+    } else {
+        translateBtn.disabled = false
+    }
+}
+inputContInput.addEventListener('input', validateInput)
+
+
+
