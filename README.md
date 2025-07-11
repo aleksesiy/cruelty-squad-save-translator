@@ -1,1 +1,0 @@
-# cruelty-squad-save-translator
