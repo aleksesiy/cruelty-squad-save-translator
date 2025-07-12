@@ -2,7 +2,6 @@ import { translateToEng } from '../scripts/translate-to-eng'
 import { translateToRus } from '../scripts/translate-to-rus'
 import { createElement } from './element-creator'
 import './main.css'
-console.log('hi')
 
 const heading = createElement({
     tag: 'h1',
@@ -77,6 +76,12 @@ const translateBtn = createElement({
 })
 translateBtn.disabled = true
 
+translateBtn.addEventListener('click', () => {
+    outputContOutput.value = translateToEng(JSON.parse(inputContInput.value))
+    isReturned = true
+    copyBtn.classList.add('showup')
+})
+
 
 
 toggleBtn.addEventListener('click', () => {
@@ -106,8 +111,8 @@ async function copyTextToClipboard(text: string) {
     try {
         await navigator.clipboard.writeText(text);
         copyBtn.textContent = 'Скопировано!';
-        setTimeout(() => 
-        copyBtn.classList.remove('showup'), 1000)
+        setTimeout(() =>
+            copyBtn.classList.remove('showup'), 1000)
 
     } catch (err) {
         console.error('Failed to copy text: ', err);
@@ -123,6 +128,33 @@ function validateInput() {
     }
 }
 inputContInput.addEventListener('input', validateInput)
+
+
+const footer = createElement({
+    tag: 'footer',
+    parent: document.body
+})
+const ghLink = createElement({
+    tag: 'a',
+    parent: footer,
+    text: 'мой гитхаб'
+})
+ghLink.href = "https://github.com/aleksesiy"
+
+const steamLink = createElement({
+    tag: 'a',
+    parent: footer,
+    text: 'ссылка на гайд'
+})
+steamLink.href = "https://steamcommunity.com/sharedfiles/filedetails/?id=2657599685"
+
+const ghRepoLink = createElement({
+    tag: 'a',
+    parent: footer,
+    text: 'репо проекта'
+})
+ghRepoLink.href = "https://github.com/aleksesiy/cruelty-squad-save-translator"
+
 
 
 

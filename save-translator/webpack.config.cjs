@@ -9,7 +9,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'app/index.html'),
+        title: 'Cruelty Squad Save Translator',
+        filename: 'index.html',
+        favicon: 'app/favicon.ico'
+    })],
     module: {
         rules: [
             {
@@ -20,6 +25,14 @@ module.exports = {
                 test: /\.ts$/i,
                 use: 'ts-loader',
                 exclude: '/node_modules/'
+            },
+            {
+                test: /\.(png|jpe?g|gif|ico)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
             }
         ]
     },

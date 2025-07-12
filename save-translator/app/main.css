@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-
+    margin: 0;
     padding-top: 2em;
 }
 
@@ -44,9 +44,11 @@ input {
 
     &:hover {
         cursor: pointer;
-        background-color: rgb(223, 224, 219);
+        background-color: #cfcfcf;
         transition: 0.1s;
         scale: 1.05;
+
+        box-shadow: 0px 2px 3px #a3925b;
     }
 }
 
@@ -66,9 +68,13 @@ input {
         transition: 0.1s;
         scale: 1.05;
 
+        box-shadow: 0px 2px 3px #a3925b;
+
+
         &:disabled {
             cursor: not-allowed;
             scale: 1;
+            box-shadow: none;
         }
     }
 
@@ -80,6 +86,9 @@ textarea {
     padding: 5px;
     position: relative;
     z-index: 10;
+
+    box-shadow: 0px 2px 3px #a3925b;
+
 }
 
 h4 {
@@ -92,7 +101,7 @@ h1 {
     max-width: 60%;
     color: white;
     margin: 0 auto;
-
+    text-shadow: 0px 3px 4px #0a0a0a;
 }
 
 .copyBtn {
@@ -114,10 +123,35 @@ h1 {
         transition: 0.5s;
 
         &:hover {
-            cursor:pointer;
+            cursor: pointer;
             background-color: #bba86b;
 
         }
+
+    }
+}
+
+footer {
+    position: relative;
+    background: #272727;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+    gap: 2em;
+    margin-top: 2.5em;
+}
+
+a {
+    color: white;
+    transition: 0.1s;
+
+    &:hover {
+        color: #a3925b;
+        transition: 0.1s;
 
     }
 }
