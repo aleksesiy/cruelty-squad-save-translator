@@ -1,23 +1,22 @@
 export interface Savefile {
-  'bonus_unlocked': string[],
-  'consecutive_deaths': number,
-  'dead_npcs': string[],
-  'death': boolean,
-  "ending_1": boolean,
-  "ending_2": boolean,
-  "ending_3": boolean,
-  "hell_discovered": boolean,
-  "hope": boolean,
-  "husk": boolean,
-  "implants_unlocked": string[],
-  "items_found": string[],
-  "levels_punished": boolean[],
-  "levels_unlocked": number,
-  "money": number,
-  "play_time": number,
-  "soul": boolean,
-  "weapons_unlocked": boolean[],
-
+  bonus_unlocked: string[];
+  consecutive_deaths: number;
+  dead_npcs: string[];
+  death: boolean;
+  ending_1: boolean;
+  ending_2: boolean;
+  ending_3: boolean;
+  hell_discovered: boolean;
+  hope: boolean;
+  husk: boolean;
+  implants_unlocked: string[];
+  items_found: string[];
+  levels_punished: boolean[];
+  levels_unlocked: number;
+  money: number;
+  play_time: number;
+  soul: boolean;
+  weapons_unlocked: boolean[];
 
   [key: `${string}_hell_raw_stime`]: number;
   [key: `${string}_hell_raw_time`]: number;
@@ -32,30 +31,32 @@ export interface Savefile {
 export const deadNpcMapToRus: Record<string, string> = {
   "$1000000 received.": "$1000000 получено.",
   "Golem Exosystem received.": "Экзоcистема 'Голем' получена.",
-  "Raymond Shocktroop Tactical received.": "Raymond Shocktroop Tactical получен.",
+  "Raymond Shocktroop Tactical received.":
+    "Raymond Shocktroop Tactical получен.",
   "Jurgen Cool": "Йурген Крутой",
   "Mark Bilberry": "Марк Чернигов",
   "Michael Nielsen": "Майкл Нильсен",
   "Burt Grundel": "Берт Грундель",
   "Limit Chancellor": "Канцлер Предела",
-  "Ambassador": "Амбассадор",
-  "Henrik \"Freakout\" Johnson": "Генрих 'Приступ' Джонсон",
-  "Freak": "Фрик",
-  "Jurgen Blimp": "Йурген Дирижабль"
-}
+  Ambassador: "Амбассадор",
+  'Henrik "Freakout" Johnson': "Генрих 'Приступ' Джонсон",
+  Freak: "Фрик",
+  "Jurgen Blimp": "Йурген Дирижабль",
+};
 export const deadNpcMapToEng: Record<string, string> = {
   "$1000000 получено.": "$1000000 received.",
   "Экзоcистема 'Голем' получена.": "Golem Exosystem received.",
-  "Raymond Shocktroop Tactical получен.": "Raymond Shocktroop Tactical received.",
+  "Raymond Shocktroop Tactical получен.":
+    "Raymond Shocktroop Tactical received.",
   "Йурген Крутой": "Jurgen Cool",
   "Марк Чернигов": "Mark Bilberry",
   "Майкл Нильсен": "Michael Nielsen",
   "Берт Грундель": "Burt Grundel",
   "Канцлер Предела": "Limit Chancellor",
-  "Амбассадор": "Ambassador",
-  "Генрих 'Приступ' Джонсон": "Henrik \"Freakout\" Johnson",
-  "Фрик": "Freak",
-  "Йурген Дирижабль": "Jurgen Blimp"
+  Амбассадор: "Ambassador",
+  "Генрих 'Приступ' Джонсон": 'Henrik "Freakout" Johnson',
+  Фрик: "Freak",
+  "Йурген Дирижабль": "Jurgen Blimp",
 };
 
 // export const deadNpcArr: [string, string][]= [
@@ -79,19 +80,19 @@ export const levelMapToRus: Record<string, string> = {
   "Bog Business": "Болотный бизнесс",
   "Casino Catastrophe": "Катастрофа в Казино",
   "Cruelty Squad Headquarters": "Штаб Отряда Жестокости",
-  "Darkworld": "Тёмномирье",
-  "House": "Дом",
+  Darkworld: "Тёмномирье",
+  House: "Дом",
   "Idiot Party": "Вечеринка Идиотов",
   "Mall Madness": "Торговое Безумие",
   "Miner's Miracle": "Шахтёрское Чудо",
   "Neuron Activator": "Нейронный Активатор",
-  "Office": "Офис",
-  "Paradise": "Парадайз",
-  "Pharmakokinetiks": "Фармакокинетикс",
+  Office: "Офис",
+  Paradise: "Парадайз",
+  Pharmakokinetiks: "Фармакокинетикс",
   "Seaside Shock": "Прибрежный Шок",
   "Sin Space Engineering": "Космическая Инженерия 'ГРЕХ'",
-  "Trauma Loop": "Травматический Цикл"
-}
+  "Trauma Loop": "Травматический Цикл",
+};
 
 export const levelMapToEng: Record<string, string> = {
   "Альпийское Гостеприимство": "Alpine Hospitality",
@@ -101,31 +102,29 @@ export const levelMapToEng: Record<string, string> = {
   "Болотный бизнесс": "Bog Business",
   "Катастрофа в Казино": "Casino Catastrophe",
   "Штаб Отряда Жестокости": "Cruelty Squad Headquarters",
-  "Тёмномирье": "Darkworld",
-  "Дом": "House",
+  Тёмномирье: "Darkworld",
+  Дом: "House",
   "Вечеринка Идиотов": "Idiot Party",
   "Торговое Безумие": "Mall Madness",
   "Шахтёрское Чудо": "Miner's Miracle",
   "Нейронный Активатор": "Neuron Activator",
-  "Офис": "Office",
-  "Парадайз": "Paradise",
-  "Фармакокинетикс": "Pharmakokinetiks",
+  Офис: "Office",
+  Парадайз: "Paradise",
+  Фармакокинетикс: "Pharmakokinetiks",
   "Прибрежный Шок": "Seaside Shock",
   "Космическая Инженерия 'ГРЕХ'": "Sin Space Engineering",
-  "Травматический Цикл": "Trauma Loop"
+  "Травматический Цикл": "Trauma Loop",
 };
-
-
 
 export const implantMapToRus: Record<string, string> = {
   "First Aid Kit": "Аптечка Первой Помощи",
   "Load Bearing Vest": "Разгрузочный Жилет",
   "Pneumatic Legs": "Пневматические Ноги",
   "Stealth Suit": "Стелс-Костюм",
-  "Grappendix": "Грапендикс",
+  Grappendix: "Грапендикс",
   "Vertical Entry Device": "Девайс Вертикального Проникновения",
   "Life Sensor": "Датчик Жизненных Показателей",
-  "Gunkboosters": "Гноеплюй",
+  Gunkboosters: "Гноеплюй",
   "CSIJ Level V Biosuit": "Биокостюм V класса CSIJ",
   "Icaros Machine": "Машина Икароса",
   "Nightmare Vision Goggles": "Очки Кошмарного Видения",
@@ -135,22 +134,25 @@ export const implantMapToRus: Record<string, string> = {
   "CSIJ Level IV Body Armor": "Броня IV класса CSIJ",
   "HE Grenade": "Граната",
   "Hazmat Suit": "Костюм Химзащиты",
-  "Speed Enhancer Total Organ Package": "Полный Набор Органов Улучшения Скорости",
-  "Angular Advantage Tactical Munitions": "Тактическая Амуниция Углового Преимущества",
-  "Funkgrunters": "Фанковорчалки",
+  "Speed Enhancer Total Organ Package":
+    "Полный Набор Органов Улучшения Скорости",
+  "Angular Advantage Tactical Munitions":
+    "Тактическая Амуниция Углового Преимущества",
+  Funkgrunters: "Фанковорчалки",
   "Tattered Rain Hat": "Бывалая Дождевая Шляпа",
   "Bouncy Suit": "Костюм Прыг-Скок",
   "Flechette Grenade": "Флешеттная Граната",
-  "House": "Дом",
+  House: "Дом",
   "Ammunition Gland": "Амуниционные Железы",
   "Military Camouflage": "Военный Камуфляж",
   "CSIJ Level III Body Armor": "Броня III класса CSIJ",
   "Tactical Blast Shield": "Тактический Противовзрывной Щит",
-  "Biothruster": "Биосопло",
+  Biothruster: "Биосопло",
   "ZZzzz Special Sedative Grenade": "Специальная Седативная Граната ZZzzz",
   "Augmented arms": "Аугментированные руки",
-  "Zomy X-200 Portable Cassette Player": "Портативный Кассетный Плеер Zomy X-200",
-  "Skullgun": "Черепопушка",
+  "Zomy X-200 Portable Cassette Player":
+    "Портативный Кассетный Плеер Zomy X-200",
+  Skullgun: "Черепопушка",
   "Zoom n Go Bionic Eyes": "Бионические глаза Zoom N Go",
   "Zoom N Go Bionic Eyes": "Бионические глаза Zoom N Go",
   "Composite Helmet": "Композитный шлем",
@@ -163,11 +165,11 @@ export const implantMapToRus: Record<string, string> = {
   "Goo Overdrive": "Слизь-Перегруз",
   "Cursed Torch": "Проклятый Светильник",
   "Cortical Scaledown+": "Кортикальный Уменьшатель+",
-  "Abominator": "Богомерз",
+  Abominator: "Богомерз",
   "Microbial Oil Secretion Glands": "Гланды Выделения Масла Microbial",
   "Holy Scope": "Священный Прицел",
-  "Biojet": "Биоджет",
-  "Flowerchute": "Цветопрыск"
+  Biojet: "Биоджет",
+  Flowerchute: "Цветопрыск",
 };
 
 export const implantMapToEng: Record<string, string> = {
@@ -175,10 +177,10 @@ export const implantMapToEng: Record<string, string> = {
   "Разгрузочный Жилет": "Load Bearing Vest",
   "Пневматические Ноги": "Pneumatic Legs",
   "Стелс-Костюм": "Stealth Suit",
-  "Грапендикс": "Grappendix",
+  Грапендикс: "Grappendix",
   "Девайс Вертикального Проникновения": "Vertical Entry Device",
   "Датчик Жизненных Показателей": "Life Sensor",
-  "Гноеплюй": "Gunkboosters",
+  Гноеплюй: "Gunkboosters",
   "Биокостюм V класса CSIJ": "CSIJ Level V Biosuit",
   "Машина Икароса": "Icaros Machine",
   "Очки Кошмарного Видения": "Nightmare Vision Goggles",
@@ -186,24 +188,27 @@ export const implantMapToEng: Record<string, string> = {
   "Броня IIВ класса CSIJ": "CSIJ Level IIB Body Armor",
   "Инопланетное Биологическое Обеспечение Для Ног": "Alien Leg Wetware",
   "Броня IV класса CSIJ": "CSIJ Level IV Body Armor",
-  "Граната": "HE Grenade",
+  Граната: "HE Grenade",
   "Костюм Химзащиты": "Hazmat Suit",
-  "Полный Набор Органов Улучшения Скорости": "Speed Enhancer Total Organ Package",
-  "Тактическая Амуниция Углового Преимущества": "Angular Advantage Tactical Munitions",
-  "Фанковорчалки": "Funkgrunters",
+  "Полный Набор Органов Улучшения Скорости":
+    "Speed Enhancer Total Organ Package",
+  "Тактическая Амуниция Углового Преимущества":
+    "Angular Advantage Tactical Munitions",
+  Фанковорчалки: "Funkgrunters",
   "Бывалая Дождевая Шляпа": "Tattered Rain Hat",
   "Костюм Прыг-Скок": "Bouncy Suit",
   "Флешеттная Граната": "Flechette Grenade",
-  "Дом": "House",
+  Дом: "House",
   "Амуниционные Железы": "Ammunition Gland",
   "Военный Камуфляж": "Military Camouflage",
   "Броня III класса CSIJ": "CSIJ Level III Body Armor",
   "Тактический Противовзрывной Щит": "Tactical Blast Shield",
-  "Биосопло": "Biothruster",
+  Биосопло: "Biothruster",
   "Специальная Седативная Граната ZZzzz": "ZZzzz Special Sedative Grenade",
   "Аугментированные руки": "Augmented arms",
-  "Портативный Кассетный Плеер Zomy X-200": "Zomy X-200 Portable Cassette Player",
-  "Черепопушка": "Skullgun",
+  "Портативный Кассетный Плеер Zomy X-200":
+    "Zomy X-200 Portable Cassette Player",
+  Черепопушка: "Skullgun",
   "Бионические глаза Zoom N Go": "Zoom N Go Bionic Eyes",
   "Композитный шлем": "Composite Helmet",
   "Скопление Лимфоузлов Улучшения Скорости": "Speed Enhancer Node Cluster",
@@ -215,9 +220,9 @@ export const implantMapToEng: Record<string, string> = {
   "Слизь-Перегруз": "Goo Overdrive",
   "Проклятый Светильник": "Cursed Torch",
   "Кортикальный Уменьшатель+": "Cortical Scaledown+",
-  "Богомерз": "Abominator",
+  Богомерз: "Abominator",
   "Гланды Выделения Масла Microbial": "Microbial Oil Secretion Glands",
   "Священный Прицел": "Holy Scope",
-  "Биоджет": "Biojet",
-  "Цветопрыск": "Flowerchute"
+  Биоджет: "Biojet",
+  Цветопрыск: "Flowerchute",
 };

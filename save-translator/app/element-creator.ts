@@ -1,11 +1,10 @@
 interface CreateElementOptions {
-    tag?: keyof HTMLElementTagNameMap;
-    text?: string;
-    parent?: HTMLElement;
-    classes?: string[];
-    id?: string;
+  tag?: keyof HTMLElementTagNameMap;
+  text?: string;
+  parent?: HTMLElement;
+  classes?: string[];
+  id?: string;
 }
-
 
 /**
  * Function to create an HTML element with specified parameters.
@@ -17,29 +16,29 @@ interface CreateElementOptions {
  * @returns {HTMLElement} - Created HTML element.
  */
 function createElement<T extends keyof HTMLElementTagNameMap>(
-    options: { tag: T } & CreateElementOptions
+  options: { tag: T } & CreateElementOptions,
 ): HTMLElementTagNameMap[T] {
-    // Default values
-    const { tag, text = '', parent, classes = [], id } = options;
+  // Default values
+  const { tag, text = "", parent, classes = [], id } = options;
 
-    const element = document.createElement(tag);
-    element.textContent = text;
+  const element = document.createElement(tag);
+  element.textContent = text;
 
-    // Adding classes if provided
-    if (classes.length > 0) {
-        element.classList.add(...classes);
-    }
-    // Adding id if provided
-    if (id !== undefined) {
-        element.id = id;
-    }
+  // Adding classes if provided
+  if (classes.length > 0) {
+    element.classList.add(...classes);
+  }
+  // Adding id if provided
+  if (id !== undefined) {
+    element.id = id;
+  }
 
-    // Adding the element to the parent element if necessary
-    if (parent != undefined) {
-        parent.append(element);
-    }
+  // Adding the element to the parent element if necessary
+  if (parent != undefined) {
+    parent.append(element);
+  }
 
-    return element; // Returning the created element for further manipulations
+  return element; // Returning the created element for further manipulations
 }
 
 export { createElement };
